@@ -7,44 +7,40 @@
 }
 
 body {
-	font-family: 'Titillium Web', sans-serif;
-	color: #8c8c8c;
+	font: 300 10px/1.3 'Titillium Web', sans-serif;
+	color: #555;
 }
 
 h1 {
-	font-family: 'Teko', sans-serif;
-	font-size: 84px;
-	font-weight: 300;
+	font: 300 84px/1.2 'Teko', sans-serif;
 	text-transform: uppercase;
-	color: #fff;
 	letter-spacing: 12px;
-	line-height: 1.2;
+	color: #fff;
 	min-width: 810px;
 }
 
 h2 {
-	font-family: 'Teko', sans-serif;
-	font-size: 28px;
+	font: 29px 'Teko', sans-serif;
 	text-transform: uppercase;
 	letter-spacing: 3px;
-	margin: 38px auto;
-	color: black;
 	text-align: center;
+	color: #000;
 }
 
 h3 {
-	font-family: 'Teko', sans-serif;
-	font-size: 21px;
+	font: 21px 'Teko', sans-serif;
 	text-transform: uppercase;
 	letter-spacing: 2px;
-	color: black;
-	margin: 10px 0 4px;
+	color: #000;
+	margin-top: 5px;
 }
 
-p {
-	font-family: 'Titillium Web', sans-serif;
-	font-size: 10px;
-	font-weight: 300;
+a {
+	font: 14px 'Teko', sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	text-align: center;
+	text-decoration: none;
 }
 
 .clearfix:after {
@@ -53,37 +49,23 @@ p {
 	clear: both;
 }
 
-a {
-	text-decoration: none;
-	font-family: 'Teko', sans-serif;
-	font-size: 15px;
-	font-weight: 300;
-	text-transform: uppercase;
-	letter-spacing: 3px;
-	text-align: center;
-}
 
 
 
-/* SECTION STYLES */
-
-
-
-/* header */
+/*--------------------HEADER--------------------*/
 
 header {
 	background-color: #fff;
 	position: fixed;
-	z-index: 9999;
+	z-index: 100;
 	width: 100%;
 	opacity: .95;
 }
 
-.main-header {
+.header-content {
 	width: 60%;
-	min-width: 600px;
+	min-width: 810px;
 	margin: 0 auto;
-	background-color: #fff;
 }
 
 .logo, .logo img {
@@ -94,8 +76,6 @@ header {
 
 .main-navigation {
 	float: right;
-	font-size: 13px;
-	font-family: 'Titillium Web', sans-serif;
 	margin-top: 20px;
 }
 
@@ -104,24 +84,32 @@ header {
 	margin-left: 20px;
 }
 
+.main-navigation a {
+	font: 400 11px 'Titillium Web', sans-serif;
+	text-transform: none;
+	letter-spacing: 0px;
+	color: #a3a3a3;
+}
+
+.active a { 
+	color: #f63c3c;
+	padding-bottom: 17px;
+	border-bottom: solid #f63c3c 2px;
+}
 
 
-/* hero carousel */
 
-.heroandnav {
-background-color: black;
-position: relative;
+
+/*--------------------HERO CAROUSEL--------------------*/
+
+.hero {
+	background-color: black;
+	position: relative;
 }
 
 .carousel {
 	text-align: center;
 	position: relative;
-}
-
-.hero-carousel-1 {
-	padding: 210px 0 230px;
-	background: url(../img/bkgd.jpg) center center no-repeat;
-	background-size: cover;
 }
 
 .carousel h1, .carousel p, .carousel a {
@@ -130,30 +118,35 @@ position: relative;
 }
 
 .carousel p {
-	width: 36%;
-	color: #B2B2B2;
-	margin: 15px auto 40px;
-	font-weight: 300;
 	font-size: 15px;
+	font-weight: 300;
 	line-height: 1.3;
+	width: 36%;
+	margin: 15px auto 40px;
 	min-width: 550px;
+	color: #B2B2B2;
 }
 
 .carousel a {
 	display: block;
-	margin: 0 auto;
-	padding-top: 11px;
-	background-color: #fff;
 	width: 160px;
 	height: 35px;
-	font-family: 'Teko', sans-serif;
-	font-size: 15px;
-	font-weight: 300;
-	text-transform: uppercase;
+	margin: 0 auto;
+	padding-top: 9px;
+	background-color: #fff;
 	color: #000;
-	letter-spacing: 3px;
+}
+
+.carousel-image-1 {
+	padding: 210px 0 230px;
+	background: url(../img/bkgd.jpg) center center no-repeat;
+	background-size: cover;
 }
  
+ .carousel-image-2,  .carousel-image-3,  .carousel-image-4 {
+ 	display: none;
+ }
+
 .carousel-nav {
 	position: absolute;
     top: 727px;
@@ -168,104 +161,96 @@ position: relative;
  	width: 28px;
  	height: 3px;
  	margin: 0 3px;
-
  }
 
- li.active {
+ .carousel-nav li.active {
 	background-color: rgba(255, 255, 255, 1);
  }
 
 
 
-/* my projects section */
+/*--------------------MY PROJECTS--------------------*/
 
-.projects {
-	/*text-align: center;*/
+.my-projects {
 	width: 98%;
-	min-width: 1190px;
+	min-width: 800px;
 	margin: 0 auto;
 }
 
-.projects img {
-	width: 100%;
+.my-projects h2 {
+	margin: 30px auto 20px;
 }
 
-#discovery-caption, #infinity-caption, #sturhling-caption {
-	display: none;
-}
-
-#tesla-caption {
-	width: 100%;
-	height: 99%;
-	background-color: #f63c3c;
-	border: 11px solid #352d2f;
-	font-family: 'Teko', sans-serif;
-	font-weight: 300;
-	font-size: 16px;
-	text-transform: uppercase;
-	color: #fff;
-	letter-spacing: 3px;
-	line-height: 1.2;
-	position: absolute;
-	top: 0;
-	padding-top: 130px;
-	opacity: 0;
-	/*display: none;*/
-}
-
-#tesla-caption p { 
-	font-family: 'Teko', sans-serif;
-	font-weight: 300;
-	font-size: 12px;
-	text-transform: uppercase;
-	color: #fff;
-	letter-spacing: 3px;
-	margin-top: 45px;
-}
-
-#tesla-caption:hover {
-	opacity: 1;
-}
-
-
-
-.tesla figure {
-	position: relative;
-}
-
-
-.projects article {
+.my-projects article {
 	width: 49.5%;
 	display:inline-block;
 	text-align: center;
 }
 
-.tesla, .stuhrling {
-	margin-right:.7%;
+.my-projects article figure {
+	position: relative;
 }
 
-.projects p {
-	margin: 0 auto 34px;
+.my-projects img {
+	width: 100%;
+}
+
+.my-projects p {
+	margin: 0 auto 25px;
 	max-width: 364px;
 	line-height: 1.3;
 }
 
+figcaption {
+	font: 300 17px/1.2 'Teko', sans-serif;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	color: #fff;
+	background-color: #f63c3c;
+	border: 11px solid #352d2f;
+	width: 100%;
+	height: 97.5%;
+	position: absolute;
+	top: 0;
+	opacity: 0;
+}
+
+.my-projects figcaption p { 
+	font-size: 11px;
+	margin-top: 35px;
+}
+.my-projects figcaption p, .my-projects figcaption h4 {
+	position: relative;
+  	top: 50%;
+  	transform: translateY(-130%);
+}
+
+figcaption:hover {
+	opacity: 1;
+}
+
+.tesla-article, .stuhrling-article {
+	margin-right:.7%;
+}
+
 .more-projects {
 	margin: 0 auto 52px;
+	width: 154px;
 	display: block;
 	color: #f63c3c;
-	border: 1px;
+	border-bottom: solid #f63c3c 2px;
 }
 
 
 
-/* call to action */
+
+/*--------------------CALL TO ACTION--------------------*/
 
 .call-to-action {
 	background-color: #f63c3c;
-	height: 168px;
+	height: 180px;
 	text-align: center;
-	padding: 42px 0 38px;
+	padding-top: 38px;
 	min-width: 800px;
 }
 
@@ -283,35 +268,26 @@ position: relative;
 .call-to-action a {
 	display: block;
 	background-color: #fff;
+	color: #685157;
 	width: 189px;
 	height: 35px;
 	margin: 14px auto 0;
-	padding-top: 11px;
+	padding-top: 8px;
 }
 
 
 
-/* stay connected */
+/*--------------------STAY CONNECTED--------------------*/
 
 aside { 
 	background-color: #fafafa;
 	padding: 45px 0 43px;
 }
 
-.connected { 
-	width: 45%;
-	margin: 0 auto;
-	min-width: 800px;
-}
 aside h2 {
 	text-align: left;
-	margin: 0 0 5px;
 	letter-spacing: 4px;
 }
-
-/*aside p { 
-	padding-bottom: 42px;
-}*/
 
 aside ul {
 	display: flex;
@@ -330,10 +306,14 @@ aside a {
 	display: block;
 }
 
+.connected { 
+	width: 45%;
+	margin: 0 auto;
+	min-width: 800px;
+}
+
 .social { 
-	font-family: 'Teko', sans-serif;
-	font-size: 21px;
-	font-weight: lighter;
+	font: 300 21px 'Teko', sans-serif;
 	color: #fff;
 }
 
@@ -344,7 +324,9 @@ aside a {
 }
 
 
-/* footer */
+
+
+/*--------------------FOOTER--------------------*/
 
 footer {
 	width: 800px;
@@ -358,6 +340,5 @@ footer p {
 	width: 60%;
 }
 
-/* pseudo-classes */
 
 
