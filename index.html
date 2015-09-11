@@ -3,62 +3,84 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Sage</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Teko:300,400' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-	<header>
-		<div class="logo"><img src="img/logo.gif" alt="SAGE"></div>
-		<nav>
-			<ul>
-				<li class="active"><a href="#"></a> Home</li>
-				<li><a href="#"></a> Projects</li>
-				<li><a href="#"></a> About</li>
-				<li><a href="#"></a> Services</li>
-				<li><a href="#"></a> Blog</li>
-				<li><a href="#"></a> Get in touch</li>
-			</ul>
-		</nav>
+	<header class="clearfix">
+		<div class="main-header">
+			<div class="logo"><img src="img/logo.svg" alt="SAGE"></div>
+			<nav class= "main-navigation">
+				<ul>
+					<li class="active"><a href="#"></a> Home</li>
+					<li><a href="#"></a> Projects</li>
+					<li><a href="#"></a> About</li>
+		   			<li><a href="#"></a> Services</li>
+					<li><a href="#"></a> Blog</li>  
+					<li><a href="#"></a> Get in Touch</li>
+				</ul>
+			</nav>
+		</div>
 	</header>
 	<main>
-		<section>
-			<div>
+		<section class="heroandnav">
+			<div class="carousel">
 				<ul>
-					<li>
+					<li class="hero-carousel-1">
 						<h1>We build websites and apps that people love</h1>
 						<p>Full suite of internet services in the areas of website development, web-based enterprise solutions, corporate identity and advertisement.</p>
 						<a href="#">Explore More</a>
 					</li>
-					<li>
+					<li class="hero-carousel-2" style="display: none;">
 						<h1>We build websites and apps that people love</h1>
 						<p>Full suite of internet services in the areas of website development, web-based enterprise solutions, corporate identity and advertisement.</p>
 						<a href="#">Explore More</a>
 					</li>
-					<li>
+					<li class="hero-carousel-3" style="display: none;">
 						<h1>We build websites and apps that people love</h1>
 						<p>Full suite of internet services in the areas of website development, web-based enterprise solutions, corporate identity and advertisement.</p>
 						<a href="#">Explore More</a>
 					</li>
-					<li>
+					<li class="hero-carousel-4" style="display: none;">
 						<h1>We build websites and apps that people love</h1>
 						<p>Full suite of internet services in the areas of website development, web-based enterprise solutions, corporate identity and advertisement.</p>
 						<a href="#">Explore More</a>
 					</li>
 				</ul>
-			</div>
-			<nav>
+				<nav class="carousel-nav">
 				<ul>
+					<li></li>
 					<li class="active"></li>
 					<li></li>
 					<li></li>
-					<li></li>
 				</ul>
-			</nav>
+				</nav>
+			</div>
 		</section>
-		<section>
+		<section class="projects clearfix">
 			<h2>My Projects</h2>
-				<article>
+				<article class="tesla">
+					<figure id= "tesla-image">
+						<a href="#"><img id="tesla" src="img/tesla.jpg" alt="Model S Catalog"/></a>
+						<figcaption id="tesla-caption">
+							<h4>
+								<time datetime="2014">Year 2014</time><br>
+								Client: Tesla
+							</h4>
+							<p>Digital/Mobile/Editorial</p>
+						</figcaption>
+					</figure>
+					<h3>Model S Catalog</h3>
+					<p>Information materials that will help to discover all features of the serial electric car Tesla Model S</p>
+				</article>
+				<article class="discovery">
 					<figure>
-						<a href="#"><img src="img/model_s_catalog.jpeg" alt="Model S Catalog"/></a>
-						<figcaption>
+						<a href="#"><img src="img/discovery.jpg" alt="Model S Catalog"/></a>
+						<figcaption id="discovery-caption">
 							<h4>
 								<time datetime="2014">Year 2014</time>
 								Client: Tesla
@@ -70,13 +92,13 @@
 							</ul>
 						</figcaption>
 					</figure>
-					<h3>Model S Catalog</h3>
-					<p>Information materials that will help to discover all features of the serial electric car Tesla Model S</p>
+					<h3>Discovery Channel iPad</h3>
+					<p>The space is designed to inspire, and pique curiosity and encourage visitors to express their own creativity</p>
 				</article>
-				<article>
+				<article class="stuhrling">
 					<figure>
-						<a href="#"><img src="img/model_s_catalog.jpeg" alt="Model S Catalog"/></a>
-						<figcaption>
+						<a href="#"><img src="img/stuhrling.jpg" alt="Model S Catalog"/></a>
+						<figcaption id="sturhling-caption">
 							<h4>
 								<time datetime="2014">Year 2014</time>
 								Client: Tesla
@@ -88,13 +110,13 @@
 							</ul>
 						</figcaption>
 					</figure>
-					<h3>Model S Catalog</h3>
-					<p>Information materials that will help to discover all features of the serial electric car Tesla Model S</p>
+					<h3>Stuhrling</h3>
+					<p>Flexible multi-concept portfolio theme  based on WordPress. Built by designers, for designers, creative agencies and studios.</p>
 				</article>
-				<article>
+				<article class="Infinity">
 					<figure>
-						<a href="#"><img src="img/model_s_catalog.jpeg" alt="Model S Catalog"/></a>
-						<figcaption>
+						<a href="#"><img src="img/infinity.jpg" alt="Model S Catalog"/></a>
+						<figcaption id="infinity-caption">
 							<h4>
 								<time datetime="2014">Year 2014</time>
 								Client: Tesla
@@ -106,51 +128,47 @@
 							</ul>
 						</figcaption>
 					</figure>
-					<h3>Model S Catalog</h3>
-					<p>Information materials that will help to discover all features of the serial electric car Tesla Model S</p>
+					<h3>Infinity Spaces</h3>
+					<p>Infinity &infin; is an abstract concept describing something without any limit and is relevant in a number of fields</p>
 				</article>
-				<article>
-					<figure>
-						<a href="#"><img src="img/model_s_catalog.jpeg" alt="Model S Catalog"/></a>
-						<figcaption>
-							<h4>
-								<time datetime="2014">Year 2014</time>
-								Client: Tesla
-							</h4>
-							<ul>
-								<li>Digital</li>
-								<li>Mobile</li>
-								<li>Editorial</li>
-							</ul>
-						</figcaption>
-					</figure>
-					<h3>Model S Catalog</h3>
-					<p>Information materials that will help to discover all features of the serial electric car Tesla Model S</p>
-				</article>
-				<a href="#">Show More Projects</a>
+				<a class="more-projects" href="#">Show More Projects</a>
 		</section>
-		<section>
+		<section class="call-to-action">
 			<h2>Showcasing your work has never been more fun</h2>
 			<p>Discover elegant solution for your online portfolio. Fast, reliable, affordable...</p>
 			<a href="#">Get In Touch</a>
 		</section>
 		<aside>
-			<h2>Stay Connected</h2>
-			<p>Join us on our social netwroks for all the latest updated, product/service announements and many more</p>
-			<ul>
-				<li>
-					<a href="#" target="_blank">Behnace</a>
-				</li>
-				<li>
-					<a href="#" target="_blank">Behnace</a>
-				</li>
-				<li>
-					<a href="#" target="_blank">Behnace</a>
-				</li>
-				<li>
-					<a href="#" target="_blank">Behnace</a>
-				</li>
-			</ul>
+			<div class="connected">
+				<h2>Stay Connected</h2>
+				<p>Join us on our social netwroks for all the latest updated, product/service announements and many more</p>
+				<ul>
+					<li>
+						<a href="#" target="_blank">
+							<p><i class="fa fa-behance"></i></p>
+							<p class= social>Behance</p>
+						</a>
+					</li>
+					<li>
+						<a href="#" target="_blank">
+							<p><i class="fa fa-facebook"></i></p>
+							<p class="social">Facebook</p>
+						</a>
+					</li>
+					<li>
+						<a href="#" target="_blank">
+							<p><i class="fa fa-pinterest"></i></p>
+							<p class="social">Pinterest</p>
+						</a>
+					</li>
+					<li>
+						<a href="#" target="_blank">
+							<p><i class="fa fa-linkedin"></i></p>
+							<p class="social">LinkedIn</p>
+						</a>
+					</li>
+				</ul>
+			</div>
 		</aside>
 	</main>
 	<footer>
