@@ -20,7 +20,7 @@ h1 {
 	text-transform: uppercase;
 	letter-spacing: 12px;
 	color: #fff;
-	min-width: 810px;
+	/*min-width: 810px;*/
 }
 
 h2 {
@@ -58,34 +58,27 @@ a {
 
 /*--------------------HEADER--------------------*/
 
-header {
-	background-color: #fff;
-	position: fixed;
-	z-index: 100;
-	width: 100%;
-	opacity: .95;
-}
 
 .header-content {
-	width: 60%;
-	min-width: 810px;
+	width: 70%;
+	min-width: 800px;
 	margin: 0 auto;
 }
 
 .logo, .logo img {
 	float: left;
-	width: 55px;
-	height: 55px;
+	width: 70px;
+	height: 70px;
 }
 
 .main-navigation {
 	float: right;
-	margin-top: 20px;
+	margin-top: 30px;
 }
 
 .main-navigation li {
 	display: inline-block;
-	margin-left: 20px;
+	margin-left: 40px;
 }
 
 .main-navigation a {
@@ -97,7 +90,7 @@ header {
 
 .active a { 
 	color: #f63c3c;
-	padding-bottom: 17px;
+	padding-bottom: 14px;
 	border-bottom: solid #f63c3c 2px;
 }
 
@@ -108,24 +101,33 @@ header {
 
 .hero {
 	background-color: black;
-	position: relative;
+	min-width: 800px;
+	min-height: 900px;
+	height: 900px;
 }
 
-.carousel {
+.carousel, .carousel ul{
 	text-align: center;
 	position: relative;
+	height: 100%;
 }
 
-.carousel h1, .carousel p, .carousel a {
-	width: 65%;
-	margin: 0 auto;
+.carousel-content {
+	width: 80%;
+	position: absolute;
+	top: 50%;	
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
 }
 
 .carousel p {
 	font-size: 22px;
 	font-weight: 300;
 	line-height: 1.3;
-	width: 36%;
+	width: 63%;
 	margin: 15px auto 40px;
 	min-width: 550px;
 	color: #B2B2B2;
@@ -133,18 +135,18 @@ header {
 
 .carousel a {
 	display: block;
-	width: 160px;
-	height: 35px;
+	width: 230px;
+	height: 50px;
 	margin: 0 auto;
-	padding-top: 9px;
+	padding-top: 12px;
 	background-color: #fff;
 	color: #000;
 }
 
 .carousel-image-1 {
-	padding: 210px 0 230px;
 	background: url(../img/bkgd.jpg) center center no-repeat;
 	background-size: cover;
+	height: 100%;
 }
  
  .carousel-image-2,  .carousel-image-3,  .carousel-image-4 {
@@ -153,18 +155,25 @@ header {
 
 .carousel-nav {
 	position: absolute;
-    top: 727px;
-    left: 0px;
-    right: 0px;
+   	left: 50%; 
+   	-webkit-transform: translateX(-50%);
+   	-moz-transform: translateX(-50%);
+   	-o-transform: translateX(-50%);
+   	transform: translateX(-50%);
     margin: 0 auto;
+    bottom: 30px;
 }
 
  .carousel-nav li {
  	display: inline-block;
  	background-color: rgba(255, 255, 255, .22);
- 	width: 28px;
- 	height: 3px;
- 	margin: 0 3px;
+ 	width: 40px;
+ 	height: 4px;
+ 	margin-right: 10px;
+ }
+
+ .carousel-nav li:last-child {
+	margin-right: 0;
  }
 
  .carousel-nav li.active {
@@ -176,9 +185,7 @@ header {
 /*--------------------MY PROJECTS--------------------*/
 
 .my-projects {
-	width: 98%;
 	min-width: 800px;
-	margin: 0 auto;
 }
 
 .my-projects h2 {
@@ -186,60 +193,71 @@ header {
 }
 
 .my-projects article {
-	width: 49.5%;
-	display:inline-block;
+	width: 48.5%;
+	margin-right: 1%;
+	float: left;
 	text-align: center;
+}
+
+.my-projects article:nth-child(even) {
+	margin-left: 1%;
 }
 
 .my-projects article figure {
 	position: relative;
 }
 
-.my-projects img {
+.my-projects article img {
 	width: 100%;
+	height: auto;
 }
 
 .my-projects p {
 	margin: 0 auto 25px;
-	max-width: 364px;
+	width: 76%;
 	line-height: 1.3;
 }
 
 figcaption {
-	font: 300 24px/1.2 'Teko', sans-serif;
-	letter-spacing: 3px;
-	text-transform: uppercase;
-	color: #fff;
 	background-color: #f63c3c;
 	border: 11px solid #352d2f;
 	width: 100%;
-	height: 97.5%;
+	height: 99%;
 	position: absolute;
 	top: 0;
+	left: 0;
 	opacity: 0;
 }
 
-.my-projects figcaption p { 
+.figcaption-content { 
+	font: 300 24px/1.2 'Teko', sans-serif;
+	color: #fff;
+	text-transform: uppercase;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+.figcaption-content p { 
 	font-size: 18px;
 	margin-top: 35px;
-}
-.my-projects figcaption p, .my-projects figcaption h4 {
-	position: relative;
-  	top: 50%;
-  	transform: translateY(-130%);
+	width: 100%;
 }
 
 figcaption:hover {
 	opacity: 1;
 }
 
-.tesla-article, .stuhrling-article {
-	margin-right:.7%;
-}
-
 .more-projects {
-	margin: 0 auto 52px;
-	width: 154px;
+	min-width: 800px;
+}
+.more-projects a {
+	margin: 20px auto 60px;
+	width: 187px;
 	display: block;
 	color: #f63c3c;
 	border-bottom: solid #f63c3c 2px;
@@ -252,9 +270,9 @@ figcaption:hover {
 
 .call-to-action {
 	background-color: #f63c3c;
-	height: 180px;
 	text-align: center;
 	padding-top: 38px;
+	padding-bottom: 50px;
 	min-width: 800px;
 }
 
@@ -273,41 +291,41 @@ figcaption:hover {
 	display: block;
 	background-color: #fff;
 	color: #685157;
-	width: 189px;
-	height: 35px;
+	width: 270px;
+	height: 50px;
 	margin: 14px auto 0;
-	padding-top: 8px;
+	padding-top: 12px;
 }
 
 
 
 /*--------------------STAY CONNECTED--------------------*/
 
-aside { 
+.stay-connected { 
 	background-color: #fafafa;
 	padding: 45px 0 43px;
 }
 
-aside h2 {
+.stay-connected h2 {
 	text-align: left;
 	letter-spacing: 4px;
 }
 
-aside ul {
+.stay-connected ul {
 	display: flex;
 	justify-content: space-between;
 	-webkit-justify-content: space-between;
 	margin-top: 42px;
 }
 
-aside li {
+.stay-connected li {
 	background-color: #30282a;
 	width: 189px;
 	height: 136px;
 	padding-top: 36px;
 }
 
-aside a { 
+.stay-connected a { 
 	display: block;
 }
 
@@ -335,14 +353,16 @@ aside a {
 
 footer {
 	width: 800px;
-	height: 52px;
-	padding-top: 17px;
+	height: 100%;
+	padding-top: 25px;
 	font-size: 13px;
 	margin: 0 auto;
+	height: 75px;
 }
 
 footer p {
 	width: 60%;
+	font-size: 13px;
 }
 
 
